@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+
+    Template 2082 Pure Mix
+
+    http://www.tooplate.com/view/2082-pure-mix
+
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Site title
+   ================================================== -->
+    <title>WHAT2WEAR - Contact</title>
+
+    <!-- Bootstrap CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Animate CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- Font Icons CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <!-- Main CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google web font
+   ================================================== -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBflU7G6hS6jXQCMsmQ0NER2jIsaWJXTFw"></script>
+    <script>
+        // In this example, we center the map, and add a marker, using a LatLng object
+        // literal instead of a google.maps.LatLng object. LatLng object literals are
+        // a convenient way to add a LatLng coordinate and, in most cases, can be used
+        // in place of a google.maps.LatLng object.
+
+        var map;
+        function initialize() {
+            var mapOptions = {
+                zoom: 8,
+                center: {lat: -34.397, lng: 150.644}
+            };
+            map = new google.maps.Map(document.getElementById('map'),
+                mapOptions);
+
+            var marker = new google.maps.Marker({
+                // The below line is equivalent to writing:
+                // position: new google.maps.LatLng(-34.397, 150.644)
+                position: {lat: -34.397, lng: 150.644},
+                map: map
+            });
+
+            // You can use a LatLng literal in place of a google.maps.LatLng object when
+            // creating the Marker object. Once the Marker object is instantiated, its
+            // position will be available as a google.maps.LatLng object. In this case,
+            // we retrieve the marker's position using the
+            // google.maps.LatLng.getPosition() method.
+            var infowindow = new google.maps.InfoWindow({
+                content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+    <div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+    <nav class="nav-inner transparent">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="row">
+
+                    <div class="brand">
+                        <a href="index.html">WHAT2WEAR</a>
+                    </div>
+
+                    <div class="navicon">
+                        <div class="menu-container">
+
+                            <div class="circle dark inline">
+                                <i class="icon ion-navicon"></i>
+                            </div>
+
+                            <div class="list-menu">
+                                <i class="icon ion-close-round close-iframe"></i>
+                                <div class="intro-inner">
+                                    <ul id="nav-menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-four">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                <div class="header-thumb">
+                    <h1 class="wow fadeIn" data-wow-delay="0.6s">Contact Us</h1>
+                    <h3 class="wow fadeInUp" data-wow-delay="0.9s">Would like to submit your outfits and link to your
+                        site? contact us! </h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact section
+================================================== -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="1.3s">
+                <div class="google_map">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+
+            <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="1.6s">
+                <h1>Let's work together!</h1>
+                <div class="contact-form">
+                    <form id="contact-form" method="post" action="#">
+                        <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+                        <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+                        <textarea name="message" class="form-control" placeholder="Message" rows="4"
+                                  required></textarea>
+                        <div class="contact-submit">
+                            <input type="submit" class="form-control submit" value="Send a message">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="wow fadeInUp media" data-wow-delay="0.3s">
+                    <div class="media-object pull-left">
+                        <i class="fa fa-tablet"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Phone</h3>
+                        <p>+1 604 7537915</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="wow fadeInUp media" data-wow-delay="0.6s">
+                    <div class="media-object pull-left">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Email</h3>
+                        <p>what2wear@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="wow fadeInUp media" data-wow-delay="0.9s">
+                    <div class="media-object pull-left">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Address</h3>
+                        <p>Rupert street<br>
+                            Vancouver BC, Canada V5R2J9</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <p class="wow fadeInUp" data-wow-delay="0.3s">Copyright © 2017 WHAT2WEAR</p>
+                <ul class="social-icon wow fadeInUp" data-wow-delay="0.6s">
+                    <li><a href="www.facebook.com" class="fa fa-facebook"></a></li>
+                    <li><a href="www.twitter.com" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                    <li><a href="#" class="fa fa-behance"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+</body>
+</html>
